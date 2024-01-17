@@ -7,7 +7,7 @@ import hashlib
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL", "postgres://vaja_19_game_user:n39r1bbBVjZjXP27ieJtR1NqiDq4axM3@dpg-cmk1ds5a73kc7388lnv0-a/vaja_19_game")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL", "sqlite:///localhost.sqlite")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db_url = os.getenv("DATABASE_URL", "sqlite:///db.sqlite").replace("postgres://", "postgresql://", 1)
