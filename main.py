@@ -11,8 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # postgres://vaja_19_game_user:n39r1bbBVjZjXP27ieJtR1NqiDq4axM3@dpg-cmk1ds5a73kc7388lnv0-a.frankfurt-postgres.render.com/vaja_19_gameexprot
 
-db_url = os.getenv("DATABASE_URL","sqlite:///db.sqlite").replace("postgres://", "postgresql://", 1)
-db = SQLAlchemy(db_url)
+
 db = SQLAlchemy(app)
 
 class User(db.Model):
