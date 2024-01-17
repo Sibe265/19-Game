@@ -9,7 +9,6 @@ app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL", "sqlite:///localhost.sqlite")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# postgres://vaja_19_game_user:n39r1bbBVjZjXP27ieJtR1NqiDq4axM3@dpg-cmk1ds5a73kc7388lnv0-a.frankfurt-postgres.render.com/vaja_19_gameexprot
 
 db = SQLAlchemy(app)
 
